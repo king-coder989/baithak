@@ -21,10 +21,17 @@ const funnelSans = Funnel_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-// Websit Config
+// Website Config
 export const metadata: Metadata = {
-  title: "FIL-B",
-  description: "Made with love by Team FIL-B",
+  title: "Baithak — AI ki Baithak",
+  description: "A decentralized space for AI creators — where models meet chai. Store, share, and collaborate on datasets, models, prompts, and configs powered by Filecoin.",
+  keywords: ["AI", "Filecoin", "Lighthouse", "IPFS", "Decentralized Storage", "Machine Learning", "Datasets", "Models"],
+  authors: [{ name: "Baithak Team" }],
+  openGraph: {
+    title: "Baithak — AI ki Baithak",
+    description: "A decentralized space for AI creators — where models meet chai.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
