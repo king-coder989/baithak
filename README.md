@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
+# 🪶 Baithak — A Decentralized Space for AI Creators
 
-## Project info
+**Tagline:** _AI ki Baithak — where models meet chai._
 
-**URL**: https://lovable.dev/projects/094ca5d9-e4f2-464c-86e0-b57c9f71aa6f
+Baithak is a decentralized platform for AI creators to **store, share, and collaborate** on datasets, models, prompts, and configuration files — all powered by **Filecoin** and **Lighthouse**.  
+Think of it as the decentralized, community-first version of Hugging Face — where your AI assets stay **secure, permanent, and truly yours.**
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Project Vision
 
-**Use Lovable**
+AI innovation thrives on open sharing — but centralized storage means limited control, privacy risks, and impermanence.  
+**Baithak** flips that script: a decentralized hub where creators own their uploads, control access, and collaborate without gatekeepers.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/094ca5d9-e4f2-464c-86e0-b57c9f71aa6f) and start prompting.
+> A digital baithak for AI minds — decentralized, secure, and built for the future of open AI.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ⚙️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | Next.js, Tailwind CSS, shadcn/ui |
+| **Storage** | Filecoin + Lighthouse |
+| **Auth** | WalletConnect (Web3 Authentication) |
+| **Design** | Lovable UI/UX |
+| **Integration Base** | Orbit Starter Kit |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🔑 Core Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- 🔒 **Decentralized Storage** — Store AI assets permanently on Filecoin via Lighthouse.  
+- 🪪 **Web3 Authentication** — Log in with your crypto wallet, no passwords.  
+- 🧠 **AI Asset Marketplace** — Upload and browse datasets, models, and prompts.  
+- ⚙️ **Access Control** — Manage who can view or download your assets.  
+- 🌐 **Community Collaboration** — Share, discover, and build transparently.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
+Architecture Overview
 
-# Step 3: Install the necessary dependencies.
-npm i
+Frontend (Next.js) — Handles upload, browse, and display of AI assets.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Filecoin + Lighthouse — Decentralized storage and encryption.
 
-**Edit a file directly in GitHub**
+Wallet Authentication — User access and ownership validation.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Access Layer — Smart contract-like controls for permissions.
 
-**Use GitHub Codespaces**
+🎨 Design Language
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Primary Color: Deep Dark-Matter Blue #1C1C3C
 
-## What technologies are used for this project?
+Accent: Warm Amber #FFB74D
 
-This project is built with:
+Base: Off-White #FAFAFA
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Mood: Minimal, warm, creator-friendly — “Hugging Face meets Web3 with chai vibes.”
 
-## How can I deploy this project?
+💬 Team Notes for Demo
 
-Simply open [Lovable](https://lovable.dev/projects/094ca5d9-e4f2-464c-86e0-b57c9f71aa6f) and click on Share -> Publish.
+“We focused our hackathon sprint on designing the architecture and building the full UI/UX experience.
+The decentralized storage and access modules are pre-integrated via Lighthouse API hooks and will go live post-demo.”
 
-## Can I connect a custom domain to my Lovable project?
+🧾 Future Scope
 
-Yes, you can!
+Add model preview and evaluation metrics.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+On-chain reputation and creator profiles.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+AI-assisted tagging and dataset discovery.
+
+NFT-like provenance tracking for AI assets.
+
+❤️ Built with
+
+☕ Passion • 💡 Curiosity • 🧠 Open Collaboration
+by the Baithak 
+## 🧩 Project Structure
+
