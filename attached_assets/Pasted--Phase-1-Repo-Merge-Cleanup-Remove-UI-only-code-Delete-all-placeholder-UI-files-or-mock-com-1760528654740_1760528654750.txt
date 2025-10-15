@@ -1,0 +1,160 @@
+🧭 Phase 1 — Repo Merge & Cleanup
+
+Remove UI-only code:
+
+Delete all placeholder UI files or mock components generated during the previous UI/UX design phase.
+
+Retain only the visual design assets (styles, components, icons).
+
+Remove any fake data or mock APIs.
+
+Integrate Starter Kit Codebase:
+
+Merge the entire Filecoin starter kit (already uploaded) into the root of this repo.
+
+Make sure all core folders (app/, components/, lib/, hooks/, etc.) from the starter kit are preserved.
+
+Resolve any merge conflicts by prioritizing the starter kit’s working logic over mock UI logic.
+
+Keep Existing Integrations:
+
+Retain wallet connection setup (wagmi + RainbowKit).
+
+Retain Lighthouse SDK integration and working /store page.
+
+Ensure providers.tsx and all blockchain/env setup files remain intact.
+
+Delete old UI entry points:
+
+Remove any redundant landing pages or /home, /dashboard, /upload placeholders created in Lovable’s design phase.
+
+Keep only the real Next.js routes coming from the starter kit.
+
+⚙️ Phase 2 — Rebrand and Structure as “Baithak”
+
+Update all branding and metadata:
+
+Change app name to Baithak.
+
+Title: Baithak — AI ki Baithak.
+
+Description: A decentralized space for AI creators — where models meet chai.
+
+Update logo, header, footer to reflect Baithak identity.
+
+Keep Tailwind + shadcn/ui theme intact.
+
+Replace Germina Labs references with “Baithak Team”.
+
+Implement navigation structure:
+
+/upload → Upload AI Asset (uses Lighthouse).
+
+/browse → Browse assets (grid of locally saved metadata).
+
+/asset/[cid] → Asset detail page.
+
+/profile → User’s uploaded assets.
+
+🧩 Phase 3 — Implement Functional Layers
+
+Lighthouse Integration Layer (lib/lighthouse.ts):
+Create a wrapper for Lighthouse SDK functions:
+
+uploadFile, uploadWithEncryption, shareAccess, revokeAccess, getAccessList, downloadFile.
+
+Handle encryption, access control, and progress tracking.
+
+Metadata Layer (lib/metadata.ts):
+
+Define AssetMetadata schema (id, name, type, tags, license, uploader, cid, size, etc.).
+
+Create utilities to generate metadata JSON, upload to IPFS, and validate file types.
+
+Asset Management Layer (lib/assets.ts):
+
+Implement saveAssetToLocal, getLocalAssets, getAssetById, filterAssets, and sortAssets for local/demo storage.
+
+Use localStorage to persist uploaded asset metadata for the MVP.
+
+UI Components:
+
+AssetCard.tsx → grid display of asset metadata.
+
+UploadForm.tsx → drag-and-drop upload with metadata form and encryption toggle.
+
+Page Routes:
+
+/upload/page.tsx → Uses UploadForm.
+
+/browse/page.tsx → Lists all local assets via AssetCard.
+
+/asset/[cid]/page.tsx → Shows detailed asset view and access control options.
+
+/profile/page.tsx → Displays assets uploaded by connected wallet.
+
+Hooks & State:
+
+Add useAssets.ts React Query hooks for asset fetching and mutation.
+
+Integrate ReactQueryProvider for caching.
+
+🔑 Phase 4 — Authentication & Upload Flow
+
+Keep wallet-based authentication (RainbowKit/wagmi).
+
+Require wallet connection before upload or private access actions.
+
+Show shortened address in header when connected.
+
+Upload flow:
+
+Validate file type → Upload to Lighthouse → Generate metadata JSON → Upload metadata JSON → Save metadata CID → Store locally.
+
+Private uploads:
+
+Use Lighthouse encryption and access control APIs.
+
+Allow adding wallet addresses for sharing.
+
+🧱 Phase 5 — UI Enhancements & Final Touches
+
+Use font-funnel-display and Tailwind styling consistent with existing starter kit.
+
+Add hero section and features list on landing page (/).
+
+Ensure responsive design and dark/light consistency.
+
+Add footer links: GitHub, Docs, Twitter.
+
+Include README.md and .env.sample updates from the provided PRD.
+
+🧪 Phase 6 — Testing & Demo Prep
+
+Verify wallet connect, upload, encryption, and local storage asset listing.
+
+Ensure Lighthouse API key works via .env.local.
+
+Test upload/download via gateway URLs.
+
+Test navigation across /upload, /browse, /asset/[cid], /profile.
+
+🧰 Final Output Expectation
+
+After executing this plan, Lovable should produce:
+
+A functional Baithak MVP that allows:
+
+Wallet-based authentication
+
+File upload to Lighthouse/IPFS
+
+Metadata storage
+
+Asset browsing & detail views
+
+Local persistence of asset metadata
+
+Basic access control for private files
+
+All built atop the Filecoin starter kit’s solid foundation.
